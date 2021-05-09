@@ -104,7 +104,7 @@ class VeSyncDimmableLightHA(VeSyncBaseLight, LightEntity):
         return [COLOR_MODE_BRIGHTNESS]
 
 
-class VeSyncTunableWhiteLightHA(VeSyncDevice, LightEntity):
+class VeSyncTunableWhiteLightHA(VeSyncBaseLight, LightEntity):
     """Representation of a VeSync Tunable White Light device."""
 
     def __init__(self, device):
