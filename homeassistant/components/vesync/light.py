@@ -69,10 +69,10 @@ class VeSyncBaseLight(VeSyncDevice, LightEntity):
     def brightness(self):
         """Get light brightness."""
         # get value from pyvesync library api,
-        brightness_value = self.device.brightness
+        r = self.device.brightness
         try:
             # check for validity of brightness value received
-            brightness_value = int(self.device.brightness)
+            brightness_value = int(r)
             # convert percent brightness to ha expected range
             brightness_value = round((max(1, brightness_value) / 100) * 255)
             return brightness_value
