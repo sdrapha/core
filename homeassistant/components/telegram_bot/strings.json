@@ -18,7 +18,7 @@
         },
         "parse_mode": {
           "name": "Parse mode",
-          "description": "Parser for the message text."
+          "description": "Parser for the message text. (`html`,`markdown` or `markdownv2`)"
         },
         "disable_notification": {
           "name": "Disable notification",
@@ -236,6 +236,14 @@
           "name": "[%key:component::telegram_bot::services::send_photo::fields::file::name%]",
           "description": "Local path to a video."
         },
+        "thumb_url": {
+          "name": "Thumb URL",
+          "description": "Remote path to a thumb image. (Videos bigger than ~15mb won't auto-generate a thumb image, so you may want to explicitly upload one)"
+        },
+        "thumb_file": {
+          "name": "Thumb File",
+          "description": "Local path to a thumb image. (Videos bigger than ~15mb won't auto-generate a thumb image, so you may want to explicitly upload one)"
+        },
         "caption": {
           "name": "[%key:component::telegram_bot::services::send_photo::fields::caption::name%]",
           "description": "The title of the video."
@@ -267,6 +275,22 @@
         "verify_ssl": {
           "name": "Verify SSL",
           "description": "[%key:component::telegram_bot::services::send_photo::fields::verify_ssl::description%]"
+        },
+        "supports_streaming": {
+          "name": "Supports Streaming",
+          "description": "Pass `true` if the uploaded video is suitable for streaming. Default is false/none. Videos with more than ~15mb won't auto-download or autoplay. So this feature is useful for bigger videos."
+        },
+        "duration": {
+          "name": "Duration",
+          "description": "Duration of the video clip (Required if using 'Supports Streaming')"
+        },
+        "width": {
+          "name": "Width",
+          "description": "Width of the video clip (Required if using 'Supports Streaming', if the width is unknown, you can use any number that it will still works, ex: `1`)"
+        },
+        "height": {
+          "name": "Height",
+          "description": "Height of the video clip (Required if using 'Supports Streaming', if the height is unknown, you can use any number that it will still works, ex: `1`)"
         },
         "timeout": {
           "name": "Timeout",
